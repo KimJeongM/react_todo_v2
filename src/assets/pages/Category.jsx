@@ -8,6 +8,7 @@ import { lazy, useState, Suspense, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import EmptyCategory from "../components/EmptyCategory";
 import { useLocation } from "react-router-dom";
+import { images } from "../components/images";
 
 const DeleteAlert = lazy(()=>import('../components/DeleteAlert')); 
 const CategoryAddEdit = lazy(()=>import('../components/CategoryAddEdit'))
@@ -85,7 +86,7 @@ function Category(){
                                                                             setEditCategory(category); 
                                                                         }}
                                                                     >
-                                                                        <img src="/src/assets/components/img/edit.svg" alt="" />
+                                                                        <img src={images.edit} alt="" />
                                                                     </Button>
                                                                     <Button 
                                                                         className="sm" 
@@ -96,7 +97,7 @@ function Category(){
                                                                             setDelCategory(category);
                                                                         }}
                                                                     >
-                                                                        <img src="/src/assets/components/img/trash.svg" alt="" />
+                                                                        <img src={images.trash} alt="" />
                                                                     </Button>
                                                                 </div>
                                                             </li>
@@ -114,7 +115,7 @@ function Category(){
                                         size="lar"
                                         onClick={()=>setCategoryNextStep(true)}
                                     >
-                                        <span className="add-icon"><img src="/src/assets/components/img/add.svg" alt="" /></span>Create new category
+                                        <span className="add-icon"><img src={images.add} alt="" /></span>Create new category 
                                         <svg width="100%" height="100%">
                                             <rect width="100%" height="100%" fill="none" rx="16" ry="16"
                                                 stroke="#616161" strokeWidth="1"

@@ -3,6 +3,7 @@ import { useCategory } from "../components/CategoryContext";
 import MakingCategoryAlert from "./MakingCategoryAlert";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { images } from "../components/images"
 
 function Nav(){
     const location = useLocation(); 
@@ -45,7 +46,7 @@ function Nav(){
                                         onClick={handleLockedClick}
                                         >
                                         <span className="icon">
-                                            <img src={`/src/assets/components/img/nav_${nav.label}.svg`} alt="" />
+                                            <img src={images[nav.label]} alt="" />
                                         </span>
                                         <span className="item-text">{nav.label}</span>
                                     </button>) : 
@@ -54,7 +55,7 @@ function Nav(){
                                         className="nav-btn"
                                     >
                                         <span className="icon">
-                                            <img src={`/src/assets/components/img/nav_${nav.label}.svg`} alt="" />
+                                            <img src={images[nav.label]} alt="" />
                                         </span>
                                         <span className="item-text">{nav.label}</span>
                                     </NavLink>

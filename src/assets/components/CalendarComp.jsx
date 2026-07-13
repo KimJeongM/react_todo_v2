@@ -1,4 +1,5 @@
 import '@/assets/components/css/calendar.css'; 
+import { images } from "../components/images";
 
 const TODAY = new Date();
 function CalendarComp({now, onDateClick, clickDate, todosByDate, propCategoryItem}){

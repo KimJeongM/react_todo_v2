@@ -18,6 +18,7 @@ import { useCalendarDate } from "../components/useCalendarDate";
 import { AnimatePresence } from "framer-motion";
 import AddTask from "../components/AddTask";
 import { useNavigate } from "react-router-dom";
+import { images } from "../components/images";
 
 const date = new Date();
 function Home(){
@@ -118,7 +119,7 @@ function Home(){
                 onClick={addTodoHandler}
             >
                 <span className="icon">
-                    <img src="/src/assets/components/img/add2.svg" alt="" />
+                    <img src={images.add2}  alt="" />
                 </span>
             </Button>
             <AnimatePresence >

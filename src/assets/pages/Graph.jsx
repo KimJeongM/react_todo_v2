@@ -6,7 +6,7 @@ import GraphHeader from "../components/GraphHeader";
 import { useCalendarDate } from "../components/useCalendarDate";
 import { addZero } from "../components/util";
 import { useTodo } from "../components/TodoContext";
-
+import { images } from "../components/images";
 
 function Graph(){
     const {categoryItem} = useCategory();
@@ -49,10 +49,10 @@ function Graph(){
                         <p className="date">{`${current.year}.${addZero(current.month + 1)}`}</p>
                         <div className="graph-ctl">
                             <Button variant="outline" shape="circle" aria-label="이전"  onClick={() => onPrev()}>
-                                <span className="icon"><img src="/src/assets/components/img/arrow-left.svg" /></span>
+                                <span className="icon"><img src={images.arrowLeft} /></span>
                             </Button>
                             <Button variant="outline" shape="circle" aria-label="이후" onClick={() => onNext()} >
-                                <span className="icon"><img src="/src/assets/components/img/arrow-right.svg" /></span>
+                                <span className="icon"><img src={images.arrowRight} /></span>
                             </Button>
                         </div>
                     </div>

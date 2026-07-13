@@ -12,6 +12,7 @@ import { useCalendarDate } from "../components/useCalendarDate";
 import AddTask from "../components/AddTask";
 import { AnimatePresence } from "framer-motion";
 import { useTodoSheet } from "../components/useTodoSheet";
+import { images } from "../components/images";
 
 function Calendar(){
     const {categoryItem} = useCategory();
@@ -69,7 +70,7 @@ function Calendar(){
                 onClick={addTodoHandler}
             >
                 <span className="icon">
-                    <img src="/src/assets/components/img/add2.svg" alt="" />
+                    <img src={images.add2} alt="" />
                 </span>
             </Button>
             <AnimatePresence >
