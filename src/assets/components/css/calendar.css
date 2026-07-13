@@ -1,0 +1,134 @@
+.bottom-sheet-wrap{
+    .week{
+        height:30px;
+    }
+}
+.calendar-wrap{
+    width:100%;
+    --gap : 8px;
+}
+.calendar-body, 
+.calendar-header{
+    width:100%;
+}
+.week{
+    display:grid; 
+    gap:var(--gap);
+    grid-template-columns: repeat(7, 1fr); 
+    height: 60px;
+}
+.header:has(.calendar-header){
+    padding:16px 16px 0
+}
+.calendar-header{
+    position:relative;
+    display:grid;
+
+    .week{
+        height:40px;
+        place-items: center;
+        font-size:14px; 
+        font-weight:400; 
+        color:var(--gray-300)
+    }
+    .calendar-ctl{
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        display:flex;
+        justify-content: space-between;
+    }
+    .current{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        height:100%;
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        font-size:20px;
+        font-weight:500;
+        span{
+            display:block;
+        }
+        .month{
+            color:var(--white);
+            font-size:20px;
+            line-height:16px;
+        }
+        .year{
+            font-size:12px;
+            line-height:16px;
+            color:var(--gray-400);
+            margin-top:5px;
+        }
+    }
+}
+.calendar-body{
+    display:grid;
+    gap:var(--gap); 
+    .day{
+        display:flex;
+        width:100%;
+        height:100%;
+        flex-direction: column;
+        align-items: center;
+        user-select:none;
+        .date-num{
+            display:inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius:10px;
+            font-size:14px;
+            font-weight:200;
+            width:30px;
+            height:30px;
+        }
+        &.is-today .date-num{
+            background-color:var(--gray-300);
+            font-weight:500;
+        }
+        &.click-date .date-num {
+            background-color:var(--violet-400) !important
+        }
+        .todo-point{
+            display:block;
+            margin-top:3px;
+            width:100%;
+            text-align:center;
+            .point{
+                display:inline-block; 
+                width:5px;
+                aspect-ratio: 1/1;
+                background:var(--bg); 
+                border-radius:50%;
+                vertical-align: top;
+                margin-top:2px;
+
+                & + .point{
+                    margin-left:3px
+                }
+            }
+        }
+    }
+}
+
+.task-wrap{
+    margin-top:24px; 
+    .task-title{
+        font-size:18px;
+        line-height:28px;
+        margin-bottom:12px;
+    }
+    .empty-wrap{
+        margin-bottom:20px;
+        img{
+            height:94px;
+        }
+        .title{
+            margin-top:14px;
+            font-size:16px;
+            font-weight:400
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+.todobox{
+    border-radius:16px;
+    padding:16px;
+    background:var(--gray-800); 
+    color:#fff; 
+    display:flex;
+    gap:12px;
+    position:relative;
+    &:last-child{
+        margin-bottom:80px;
+    }
+    .checkbox-wrap{
+        flex-shrink:0;
+    }
+    .todo-text{
+        flex-grow:1;
+        .do{
+            font-size:16px;
+            color:var(--white); 
+            line-height:24px;
+            transition:all 0.3s;
+            padding-right:70px;
+        }
+        .date{
+            margin-top:4px;
+            color:var(--gray-400); 
+            font-size:14px;
+            line-height:20px;
+        }
+    }
+    & + .todobox{
+        margin-top:8px
+    }
+    .category{
+        position:absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:has(input[type=checkbox]:checked) .do{
+        text-decoration : line-through; 
+        color:var(--gray-300) !important
+    }
+}

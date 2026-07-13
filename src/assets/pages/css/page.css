@@ -1,0 +1,21 @@
+/* home */
+.today-wrap{
+    padding-top:26px;
+    min-height: calc(100dvh - 350px);
+}
+.category-wrap{
+    width:calc(100% + 40px);
+    margin:0 -20px;
+    
+    .swiper {
+       /*  padding-inline:20px; */
+       width:100%;
+       padding:0 20px;
+    }
+    .slide{
+       /*  width : auto !important; */
+    }
+    .swiper-slide{
+        width : auto !important;
+    }
+}

@@ -1,0 +1,94 @@
+.time-sheet {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.time-sheet-title {
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.ampm-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.ampm-btn {
+    flex: 1;
+    height: 36px;
+    border: none;
+    border-radius: 24px;
+    background: var(--gray-600);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ampm-btn.is-active {
+    background: #ffffff;
+    color: #000000;
+}
+
+.time-section {
+    margin-bottom: 16px;
+}
+
+.time-section-label {
+    color: var(--white);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+.time-cell {
+    max-width : 40px;
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 50%;
+    background: var(--gray-600);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-cell.is-selected {
+    background: #ffffff;
+    color: #000000;
+}
+
+.time-sheet-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.time-btn {
+    flex: 1;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    background: #3a3a3a;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.time-btn-delete {
+    color: #ff5b5b;
+}
+
+.time-btn-confirm {
+    color: #ffffff;
+}
