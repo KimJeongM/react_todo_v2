@@ -7,8 +7,11 @@ import arrowRight from '/src/assets/components/img/arrow-right.svg';
 import emptyImg from '/src/assets/components/img/empty_img.svg'
 import home from '/src/assets/components/img/nav_home.svg';
 import calendar from '/src/assets/components/img/nav_calendar.svg';
-import category from '/src/assets/components/img/nav_category.svg'
+import category from '/src/assets/components/img/nav_category.svg';
 import graph from '/src/assets/components/img/nav_graph.svg';
+import icoCalendar from'/src/assets/components/img/calendar.svg';
+import icoClock from '/src/assets/components/img/clock.svg';
+import noFolder from '/src/assets/components/img/no-folder.svg';
 
 
 export const images = {
@@ -22,5 +25,8 @@ export const images = {
     home, 
     calendar, 
     category, 
-    graph
+    graph, 
+    noFolder, 
+    icoCalendar, 
+    icoClock
 }

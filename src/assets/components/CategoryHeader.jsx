@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { images } from "../components/images";
 
 function CategoryHeader({categoryNextStep, setCategoryNextStep}){
     return (
@@ -11,7 +12,7 @@ function CategoryHeader({categoryNextStep, setCategoryNextStep}){
                         setCategoryNextStep(false)
                     }}
                 >
-                    <span className="icon"><img src="/src/assets/components/img/arrow-left.svg" /></span>
+                    <span className="icon"><img src={images.arrowLeft} /></span>
                 </Button>
             }
              

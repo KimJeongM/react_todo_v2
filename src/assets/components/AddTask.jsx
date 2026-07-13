@@ -4,6 +4,7 @@ import BottomSheet from "./BottomSheet";
 import Button from "./Button";
 import { AnimatePresence } from "framer-motion";
 import { generateId } from "./util";
+import { images } from "../components/images";
 
 const CategorySheet = lazy(() => import('./CategorySheet'));
 const DateSheet = lazy(()=> import('./DateSheet')); 
@@ -80,13 +81,13 @@ function AddTask({onClose, bottomSheetDataHandler, editingTodo, removeTodoHandle
                                     onClick={() => setSheet('date')} 
                                     shape="circle" 
                                 >
-                                    <span className="icon"><img src="/src/assets/components/img/calendar.svg" /></span>
+                                    <span className="icon"><img src={images.icoCalendar} /></span>
                                 </Button>
                                 <Button 
                                     onClick={() => setSheet('time')} 
                                     shape="circle"
                                 >
-                                    <span className="icon"><img src="/src/assets/components/img/clock.svg" /></span>
+                                    <span className="icon"><img src={images.icoClock} /></span>
                                 </Button>
                             </div>
                             <div className="bottom-btn-area">
